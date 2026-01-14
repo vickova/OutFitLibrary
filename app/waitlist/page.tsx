@@ -28,17 +28,20 @@ export default function WaitlistPage() {
       setEmail("");
     }
   }
-
+const handleMode = (e: React.FormEvent) => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  }
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#FFF8F0] dark:bg-neutral-950 transition-colors">
+    <div className="relative min-h-screen overflow-hidden inset-0 dark:bg-neutral-950 transition-colors" onClick={handleMode}>
 
       {/* GRID */}
       <div
-        className="absolute inset-5 -z-99 dark:opacity-70"
+        className={`absolute overflow-hidden inset-0 -z-22 dark:opacity-70 bg-[${darkMode? "#000": "#FFF8F0"}]`}
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
@@ -47,7 +50,66 @@ export default function WaitlistPage() {
           backgroundSize: "64px 64px",
         }}
       />
+  {/* ✅ ASO-ÒKE — GITHUB CLOUD POSITION */}
+      {/* LEFT */}
+      {/* <motion.img
+        src="/images/aso-oke-bundle.png"
+        alt=""
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 0.85, y: 0 }}
+        transition={{ duration: 1 }}
+        className="
+          pointer-events-none
+          absolute bottom-[-120px] left-[-160px]
+          w-[420px]
+          opacity-50
+          dark:opacity-60
+        "
+      /> */}
+      <motion.img
+      src="/images/aso-oke-bundle.png"
+      alt=""
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.18 }}
+      transition={{ duration: 1 }}
+      className="
+        pointer-events-none
+        absolute bottom-[0px] left-[0]
+        w-[520px]
+        z-10
+        dark:opacity-10
+      "
+    />
 
+      {/* RIGHT */}
+      {/* <motion.img
+        src="/images/Kembe.png"
+        alt=""
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 0.75, y: 0 }}
+        transition={{ duration: 1.2 }}
+        className="
+          pointer-events-none
+          absolute bottom-[-0px] right-[-180px]
+          w-[520px]
+          opacity-70
+          dark:opacity-50
+        "
+      /> */}
+      <motion.img
+        src="/images/Kembe.png"
+        alt=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.15 }}
+        transition={{ duration: 1.2 }}
+        className="
+          pointer-events-none
+          absolute bottom-[-140px] right-[0]
+          w-[620px]
+          z-10
+          dark:opacity-08
+        "
+      />
       {/* BLOBS */}
       <div className="absolute inset-0 -z-20">
         <div className="absolute left-0 top-0 w-40 h-40 bg-yellow-400 rounded-full opacity-20 blur-3xl" />
