@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const page = () => {
+const Dashboard = () => {
   return (
-    <div>page</div>
+    <div>Dashboard</div>
   )
 }
+
+export default Dashboard
