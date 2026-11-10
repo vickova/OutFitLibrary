@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useEffect } from "react";
-import { ScrollTrigger, SplitText } from "gsap/all";
+
 
 
 const Navbar = () => {
@@ -23,8 +22,8 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="/" className="hover:text-[rgb(215,38,61)] transition">Home</a>
-          <a href="/wardrobe" className="hover:text-[#D7263D] transition">Wardrobe</a>
-          <a href="/stylist" className="hover:text-[#D7263D] transition">Stylist</a>
+          <a href="/dashboard/wardrobe" className="hover:text-[#D7263D] transition">Wardrobe</a>
+          <a href="/dashboard/stylist" className="hover:text-[#D7263D] transition">Stylist</a>
           <a href="/discover" className="hover:text-[#D7263D] transition">Discover</a>
 
         </div>

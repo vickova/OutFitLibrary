@@ -100,52 +100,13 @@ export default function AuthPage() {
         ref={containerRef}
         className="hidden lg:flex w-1/2 min-h-screen relative overflow-hidden bg-gradient-to-br from-[#046A38] to-[#022e1f]"
       >
-
-        {/* 🌙 HALF MOON ORBIT */}
-        <div className="absolute -left-[140px] top-1/2 -translate-y-1/2 w-[500px] h-[500px] overflow-hidden">
-
-          <div ref={orbitRef} className="relative w-full h-full rounded-full">
-
-            {/* Glow layers */}
-            <div className="absolute inset-0 rounded-full bg-[#046A38]/30"></div>
-            <div className="absolute inset-0 rounded-full bg-white/10"></div>
-
-            {/* Orbit Items */}
-            {[
-              "/images/green-gown.png",
-              "/images/red-gown.png",
-              "/images/ofi-gown.png",
-              "/images/Top.jpg",
-              "/images/Jean.jpg",
-              "/images/purse.jpg",
-            ].map((src, i) => (
-              <div
-                key={i}
-                ref={(el) => {
-                  if (el) orbitItemsRef.current[i] = el;
-                }}
-                className="absolute w-20 h-20 rounded-xl overflow-hidden shadow-2xl 
-                           hover:scale-125 transition-transform duration-300 cursor-pointer"
-                style={{
-                  top: "50%",
-                  left: "50%",
-                  transform: `rotate(${i * 60}deg) translate(140px) rotate(-${i * 60}deg)`
-                }}
-              >
-                <img
-                  src={src}
-                  className="w-full h-[150px] object-cover"
-                  alt="fashion item"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+          <div>
           <img
-            src="/images/green-gown.png"
-            className="w-[400px] h-full z-40 ml-20"
+            src="/images/Green.jfif"
+            className=" h-full z-40"
             alt="fashion item"
           />
+          </div>
         {/* TEXT */}
         <div className="absolute bottom-10 top-[50%] left-10 text-white max-w-md z-50">
           <h2 className="text-4xl font-bold mb-4">

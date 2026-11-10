@@ -173,13 +173,13 @@ gsap.utils.toArray<HTMLElement>(".ai-card").forEach((card, i) => {
               </p>
 
               <div className="hero-buttons flex gap-10 mt-8">
-                <Link href={'/wardrobe'}>
+                <Link href={'/dashboard/wardrobe'}>
                   <button className="mb-5 hidden md:block bg-[#D7263D] text-grey font-bold px-6 py-2 md:py-3 rounded-[50px] shadow hover:bg-[#B81F33] transition outline-2 outline-[#D7263D] outline-offset-4">
                     Find Your Next Outfit
                   </button>
                 </Link>
 
-                <Link href={'/stylist'}>
+                <Link href={'/dashboard/stylist'}>
                   <button className="mb-5 bg-[#046A38] text-grey font-bold px-6 py-2 md:py-3 rounded-[50px] shadow hover:bg-[#034E2A] transition outline-2 outline-[#046A38] outline-offset-4">
                     Upload Wardrobe
                   </button>
@@ -205,7 +205,7 @@ gsap.utils.toArray<HTMLElement>(".ai-card").forEach((card, i) => {
         </div>
 
         <div className="relative w-[35%] h-[80%]">
-          <Link href="/signup" className="">
+          <Link href="/signup" className="cursor-pointer">
             <button className="md:block hidden absolute right-[-6] text-grey px-5 py-2 rounded-lg shadow hover:bg-[#B81F33] transition">
               Sign Up
             </button>
@@ -469,7 +469,7 @@ gsap.utils.toArray<HTMLElement>(".ai-card").forEach((card, i) => {
           </p>
         </div>
 
-        <Link href={'/stylist'}>
+        <Link href={'/dashboard/stylist'}>
           <button className="mt-6 px-6 py-3 rounded-full bg-[#D7263D] hover:bg-[#B81F33] transition font-semibold">
             Try AI Styling →
           </button>
